@@ -1,6 +1,11 @@
 <div id='container'>
 <!-- Your code here -->
+  <form>
+      <input class='text' type='text' name='url' ng-model='link.url' ng-change='validate()'>
+      <button ng-click='addLink()'>Shorten</button>
+  </form>
 
+  <span>{{ message }}</span>
 </div>
 
 
