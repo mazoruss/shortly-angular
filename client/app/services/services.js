@@ -9,7 +9,7 @@ angular.module('shortly.services', [])
     }).then(function(res) {
       return res.data;
     });
-  }
+  };
 
   var addOne = function(link) {
     return $http({
@@ -19,7 +19,7 @@ angular.module('shortly.services', [])
     }).then(function(res) {
       return res;
     });
-  }
+  };
 
   return {
     getAll: getAll,
