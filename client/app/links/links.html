@@ -1,7 +1,17 @@
 <div id='container'>
   <!-- Your html here -->
   <span>links</span>
-  <ul>
-  	<li ng-repeat='link in data.links'> {{ link.title }} </li>
-  </ul>
+
+  	<div ng-repeat='link in data.links' class='link'> 
+  		<img src='/assets/redirect_icon.png' />
+  		<div class='info'>
+  			<div class='visits'>
+  				<span class='count'> {{ link.count }}</span> Visits
+  			</div>
+  			<div class='title'>{{ link.title }}</div>
+  			<div class='original'> {{ link.url }} </div>
+  			<a ng-href='{{getUrl(link)}}'>{{ getUrl(link) }}</div>
+  		</div>
+
+  	</div>
 </div>
