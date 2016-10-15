@@ -2,15 +2,17 @@
   <!-- Your html here -->
   <span>links</span>
 
-  	<div ng-repeat='link in data.links' class='link'> 
+  <input type='text' ng-model='search' ng-change='filter()'>
+
+  	<div ng-repeat='link in display' class='link'> 
   		<img src='/assets/redirect_icon.png' />
   		<div class='info'>
   			<div class='visits'>
-  				<span class='count'> {{ link.count }}</span> Visits
+  				<span class='count'> {{ link.visits }}</span> Visits
   			</div>
   			<div class='title'>{{ link.title }}</div>
   			<div class='original'> {{ link.url }} </div>
-  			<a ng-href='{{getUrl(link)}}'>{{ getUrl(link) }}</div>
+  			<a ng-href='{{getUrl(link)}}'>{{ getUrl(link) }}</a>
   		</div>
 
   	</div>
